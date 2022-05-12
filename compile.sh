@@ -13,9 +13,9 @@ if [ $OS == "Windows_NT" ]; then
     exit 1
 else
     echo "Будут установлены комплияторы. Хотите?"
-    read -p "y/n" WANT_COMPILERS;
+    read -p "y/n: " WANT_COMPILERS;
     case $WANT_COMPILERS in
-        y|yes|yea|yeah|д|да|Y|Yes|YEs|YES|yES|yeS|Yea|YEa|YEa|yEa|yea|Д|Да|дА|yeaH|yeAH|yEAH|YEAH|YEAh|YEah|Yeah|ok|oK|OK|Ok|ок|Ок|ОК|оК)
+        y|yes|yea|yeah|д|да|Y|Yes|YEs|YES|yES|yeS|Yea|YEa|YEa|yEa|yea|Д|Да|дА|yeaH|yeAH|yEAH|YEAH|YEAh|YEah|Yeah|ok|oK|OK|Ok|ок|Ок|ОК|оК|йес|й|Йес|ЙЕс|ЙЕС|Й|йЕС|йеС|йеа|йеА|йЕА|ЙЕА|ЙЕа|Йеа)
             sudo apt install gcc gcc-mingw-w64-x86-64 gcc-mingw-w64-i686
             ;;
         n|no|not|N|No|NO|nO|н|нет|Н|Нет|НЕт|НЕТ|нЕТ|неТ|неа|неА|нЕА|НЕА|Неа|НЕа|ноу|ноУ|нОУ|НОУ|НОу|Ноу)
