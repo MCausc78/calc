@@ -66,7 +66,7 @@ std::string i2s(int o)
 int main(void)
 {
 	// создание переменных для сложения
-	int a, b;
+	int x, y;
 	// создание переменной для записи и проверки что мы будем делать
 	std::string expr;
 	// вывод в терминал текста
@@ -82,18 +82,18 @@ int main(void)
 			while(0<1)
 			{
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи первую цифру: ";
-				std::cin>>a;
+				std::cin>>x;
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи вторую цифру: ";
-				std::cin>>b;
-				if(a == 0 && b == 0)
+				std::cin>>y;
+				if(x == 0 && y == 0)
 				{
 					// сообщение пользователью об выходе
 					std::cout<<"(!) Выходим"<<std::endl;
-					// выход из ошибки со кодом 0 (успешно)
+					// выход из проги со кодом 0 (успешно)
 					return 0;
 				}
 				// мы будем выводить текст результата если условия было false
-				std::cout<<a<<i2s(s2i(expr))<<b<<"="<<a-b<<""<<std::endl;
+				std::cout<<x<<i2s(s2i(expr))<<y<<"="<<x-y<<""<<std::endl;
 			}
 			break;
 		// если пользователь выбрал 1 или +
@@ -102,10 +102,10 @@ int main(void)
 			while(0<1)
 			{
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи первую цифру: ";
-				std::cin>>a;
+				std::cin>>x;
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи вторую цифру: ";
-				std::cin>>b;
-				if(a == 0 && b == 0)
+				std::cin>>y;
+				if(x == 0 && y == 0)
 				{
 					// сообщение пользователью об выходе
 					std::cout<<"(!) Выходим"<<std::endl;
@@ -113,7 +113,7 @@ int main(void)
 					return 0;
 				}
 				// мы будем выводить текст результата если условия было false
-				std::cout<<a<<i2s(s2i(expr))<<b<<"="<<a+b<<""<<std::endl;
+				std::cout<<x<<i2s(s2i(expr))<<y<<"="<<x+y<<""<<std::endl;
 			}
 			break;
 		// если пользователь выбрал 2 или %
@@ -122,10 +122,10 @@ int main(void)
 			while(0<1)
 			{
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи первую цифру: ";
-				std::cin>>a;
+				std::cin>>x;
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи вторую цифру: ";
-				std::cin>>b;
-				if(a == 0 && b == 0)
+				std::cin>>y;
+				if(x == 0 && y == 0)
 				{
 					// сообщение пользователью об выходе
 					std::cout<<"(!) Выходим"<<std::endl;
@@ -133,7 +133,9 @@ int main(void)
 					return 0;
 				}
 				// мы будем выводить текст результата если условия было false
-				std::cout<<a<<i2s(s2i(expr))<<b<<"="<<a%b<<""<<std::endl;
+				std::cout<<x<<i2s(s2i(expr))<<y<<"="<<x%y<<""<<std::endl;
+                                x = 0;
+                                y = 0;
 			}
 			break;
 		// если пользователь выбрал 3 или *
@@ -142,11 +144,11 @@ int main(void)
 			while(0<1)
 			{
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи первую цифру: ";
-				std::cin>>a;
+				std::cin>>x;
 				std::cout<<"("<<i2s(s2i(expr))<<") Введи вторую цифру: ";
-				std::cin>>b;
-				// если а и б равны 0 то выходим
-				if(a == 0 && b == 0)
+				std::cin>>y;
+				// если x и y равны 0 то выходим
+				if(x == 0 && y == 0)
 				{
 					// сообщение пользователью об выходе
 					std::cout<<"(!) Выходим"<<std::endl;
@@ -154,7 +156,9 @@ int main(void)
 					return 0;
 				}
 				// мы будем выводить текст результата если условия было false
-				std::cout<<a<<i2s(s2i(expr))<<b<<"="<<a*b<<""<<std::endl;
+				std::cout<<x<<i2s(s2i(expr))<<y<<"="<<x*y<<""<<std::endl;
+                                x = 0;
+                                y = 0;
 			}
 			break;
 		// если ничего не верно
