@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: install-compilers
-      run: sudo apt install clang gcc x86_64-w64-mingw32 i686-w64-mingw32 && x86_64-w64-mingw32-g++ -o ./build/calc-win64.exe ./src/calc.cpp && i686-w64-mingw32-g++ -o ./build/calc-win32-${VERSION}.exe ./src/calc.cpp && g++ -o ./build/calc-unix-${VERSION} ./src/calc.cpp
+      run: sudo apt install clang gcc gcc-mingw-w64-x86-64 gcc-mingw-w64-i686 g++-mingw-w64-x86-64 g++-mingw-w64-i686 && x86_64-w64-mingw32-g++ -o ./build/calc-win64.exe ./src/calc.cpp && i686-w64-mingw32-g++ -o ./build/calc-win32-${VERSION}.exe ./src/calc.cpp && g++ -o ./build/calc-unix-${VERSION} ./src/calc.cpp
